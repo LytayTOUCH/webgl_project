@@ -10,4 +10,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
+/public/*
+!/public/404.html
+!/public/422.html
+!/public/500.html
+!/public/favicon.ico
+!/public/robots.txt
 /tmp
+/config/database.yml
+/config/secrets.yml
+Gemfile.lock
+*.orig
