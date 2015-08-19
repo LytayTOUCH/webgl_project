@@ -1,0 +1,9 @@
+development:
+  GMAIL_USERNAME: myemail_development@gmail_dev.com
+  GMAIL_PASSWORD: mydevelopmentpassword123
+test:
+  GMAIL_USERNAME: myemail_test@mydomain.com
+  GMAIL_PASSWORD: mytestpassword123
+production:
+  GMAIL_USERNAME: myemail_production@mydomain.com
+  GMAIL_PASSWORD: myproductionpassword123
