@@ -13,8 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  host: <%= ENV['HOST'] %>
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +51,5 @@ test:
 production:
   <<: *default
   database: webgl_project_production
-  username: webgl_project
-  password: <%= ENV['WEBGL_PROJECT_DATABASE_PASSWORD'] %>
+  username: <%= ENV['PRODUCTION_USERNAME'] %>
+  password: <%= ENV['PRODUCTION_PASSWORD'] %>

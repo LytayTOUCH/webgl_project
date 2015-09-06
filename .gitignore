@@ -17,7 +17,5 @@
 !/public/favicon.ico
 !/public/robots.txt
 /tmp
-/config/database.yml
-/config/secrets.yml
 Gemfile.lock
 *.orig
