@@ -1,3 +1,5 @@
+# Modify sensetive database information for connecting to your database engine
+
 database_account: &database_account
   HOST: localhost_sample
   USERNAME: root_user_sample

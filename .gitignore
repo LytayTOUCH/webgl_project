@@ -16,6 +16,7 @@
 !/public/500.html
 !/public/favicon.ico
 !/public/robots.txt
+/config/application.yml
 /tmp
 Gemfile.lock
 *.orig
