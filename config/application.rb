@@ -39,6 +39,6 @@ module WebglProject
         ENV[key.to_s] = value
       end if File.exists?(env_file) # end YAML.load_file
     end # end config.before_configuration
-
+    config.quiet_assets = true
   end
 end

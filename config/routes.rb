@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  root 'dashboard#index'
 
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
