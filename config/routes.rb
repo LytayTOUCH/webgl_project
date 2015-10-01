@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   
   get 'webgl' => 'dashboard#webgl'
+  get 'triangle' => 'dashboard#triangle'
+  get 'transformation_matrix' => 'dashboard#transformation_matrix'
 
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
