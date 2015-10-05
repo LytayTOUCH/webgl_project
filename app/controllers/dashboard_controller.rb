@@ -7,4 +7,8 @@ class DashboardController < ApplicationController
   end
   def transformation_matrix
   end
+  def line
+  end
+  def square_triangle
+  end
 end

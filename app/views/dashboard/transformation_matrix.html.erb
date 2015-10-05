@@ -87,13 +87,13 @@ function start()
   // Creates GL context
   try {gl = canvas.getContext('experimental-webgl');}
   catch(e) {alert('Exception catched in getContext: '+e.toString());return;}
-  
+
   // If no exception but context creation failed, alerts user
   if(!gl) {alert('Unable to create Web GL context');return;}
-  
-  
+
+
   //---------------- end of part 1 -----------------
-  
+
   // Creates fragment shader (returns white color for any position)
   var fshader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fshader, fragmentShaderCode);
@@ -268,7 +268,7 @@ function getTransformationMatrix(ox, oy, oz, rx, ry, rz, s, d, f, n, ar, exz)
 
     <h1>WebGL wireframe object with full vertex transformation matrix</h1>
 
-    <canvas id="glcanvas" width="320" height="240" onclick="running = !running;">
+    <canvas id="glcanvas" width="800" height="600" onclick="running = !running;">
        Your browser may not support HTML5
     </canvas>
 

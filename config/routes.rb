@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'webgl' => 'dashboard#webgl'
   get 'triangle' => 'dashboard#triangle'
   get 'transformation_matrix' => 'dashboard#transformation_matrix'
-
+  get 'square_triangle' => 'dashboard#square_triangle'
+  get 'line' => 'dashboard#line'
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

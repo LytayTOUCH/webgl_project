@@ -1,23 +1,20 @@
 <script type="text/javascript">
 
 var gl; // GL context
-
+var canvas;
 // Function called by onload handler
 function start()
 {
   // Gets canvas from the HTML page
-  var canvas = document.getElementById('glcanvas');
-
+  canvas = document.getElementById('glcanvas');
   // Creates GL context
   gl = null;
   try {gl = canvas.getContext('experimental-webgl');}
   catch(e) {alert('Exception catched in getContext: '+e.toString());return;}
-
   // If no exception but context creation failed, alerts user
   if(!gl) {alert('Unable to create Web GL context');return;}
-
   // Sets clear color to non-transparent dark blue and clears context
-  gl.clearColor(0.1, 0.8, 0.2, 1.0);
+  gl.clearColor(0.0, 0.0, 0.5, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
   //---------------- end of part 1 -----------------
