@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'transformation_matrix' => 'dashboard#transformation_matrix'
   get 'square_triangle' => 'dashboard#square_triangle'
   get 'line' => 'dashboard#line'
+  get 'tuts_one' => 'dashboard#tuts_one'
+  get 'cube_axis' => 'dashboard#cube_axis'
+
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

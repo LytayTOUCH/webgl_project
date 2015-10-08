@@ -11,4 +11,8 @@ class DashboardController < ApplicationController
   end
   def square_triangle
   end
+  def tuts_one
+  end
+  def cube_axis
+  end
 end
