@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'line' => 'dashboard#line'
   get 'tuts_one' => 'dashboard#tuts_one'
   get 'cube_axis' => 'dashboard#cube_axis'
+  get 'canvas_webgl' => 'dashboard#canvas_webgl'
 
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.

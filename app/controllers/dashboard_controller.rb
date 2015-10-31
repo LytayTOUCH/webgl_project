@@ -15,4 +15,6 @@ class DashboardController < ApplicationController
   end
   def cube_axis
   end
+  def canvas_webgl
+  end
 end

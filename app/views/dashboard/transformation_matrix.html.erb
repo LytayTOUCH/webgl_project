@@ -32,7 +32,8 @@ var vertices = new Float32Array([
     0.0,  1.0,  0.0,
     0.1,  0.9,  0.0,
     0.0,  0.9,  0.0,
-    0.0,  0.0,  0.0,
+    0.0,  0.0,  0.0
+    ,
 
     /* Z Axis */
     0.0,  0.0, -1.0,
@@ -41,7 +42,8 @@ var vertices = new Float32Array([
     0.0,  0.0,  1.0,
     0.1,  0.1,  0.9,
     0.0,  0.0,  0.9,
-    0.0,  0.0,  0.0,
+    0.0,  0.0,  0.0
+    ,
     
     /* House Front*/
     0.6,  0.0,  0.0,
@@ -79,8 +81,8 @@ var running = true;  // True when the canvas is periodically refreshed
 var aspectRatio;     // Aspect ratio of the canvas used to correct the X/Y distortion 
 
 // Function called by onload handler
-function start()
-{
+function start(){
+  
   // Gets canvas from the HTML page
   var canvas = document.getElementById('glcanvas');
 
@@ -152,22 +154,22 @@ function draw()
   // Tests if canvas should be refreshed
   if(!running || !gl)
     return;
-    
+
   // Gets control value angles from HTML page via DOM
   var ax = parseInt(document.getElementById('ax').innerHTML, 10);
   var ay = parseInt(document.getElementById('ay').innerHTML, 10);
   var az = parseInt(document.getElementById('az').innerHTML, 10);
-  
+
   // Use increments via DOM to update angles (still in degrees)
   ax = (ax + parseInt(document.getElementById('dx').value, 10) + 360) % 360;
   ay = (ay + parseInt(document.getElementById('dy').value, 10) + 360) % 360;
   az = (az + parseInt(document.getElementById('dz').value, 10) + 360) % 360;
-  
+
   // Update HTML page with new values
   document.getElementById('ax').innerHTML = ax.toString();
   document.getElementById('ay').innerHTML = ay.toString();
   document.getElementById('az').innerHTML = az.toString();
-  
+
   // Convert values to radians
   ax *= 2*Math.PI/360; ay *= 2*Math.PI/360; az *= 2*Math.PI/360; 
 
@@ -183,12 +185,11 @@ function draw()
 
   // Gets reference on the "uniform" 4x4 matrix transforming coordinates
   var amvp = gl.getUniformLocation(program, "mvp");
-  if(amvp == -1)
-  {alert('Error during uniform address retrieval');running=false;return;}  
+  if(amvp == -1){alert('Error during uniform address retrieval');running=false;return;}  
 
   // Creates matrix using rotation angles
   var mat = getTransformationMatrix(ox, oy, oz, ax, ay, az, s, d, f, n, aspectRatio, exz);
-  
+
   // Sets the model-view-projections matrix in the shader
   gl.uniformMatrix4fv(amvp, false, mat);
 
