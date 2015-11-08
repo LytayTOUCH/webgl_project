@@ -1,0 +1,72 @@
+<div class=" ui top fixed menu">
+  <%= link_to root_path, class: 'ui item', title: 'Home' do %>
+      <span class="text"><i class="fa fa-home icon"></i></span>
+  <% end %>
+  <div class="ui simple dropdown icon item">
+    <span class="text"><i class="fa fa-bars icon"></i>Plot Graph</span>
+    <div class="menu">
+      <%= link_to line_equation_path, class: 'item' do %>
+        <span class="text"><i class="red fa fa-line-chart icon"></i>Line Equation</span>
+      <% end %>
+      <div class="divider"></div>
+      <div class="header">Iconic Section</div>
+      
+      <%= link_to circle_path, class: 'item' do %>
+        <span class="text"><i class="blue fa fa-circle-thin icon"></i>Circle</span>
+      <% end %>
+
+      <%= link_to ellipse_path, class: 'item' do %>
+        <span class="text"><i class="green fa fa-lemon-o icon"></i>Ellipse</span>
+      <% end %>
+
+      <%= link_to parabola_path, class: 'item' do %>
+        <span class="text"><i class="orange fa fa-moon-o icon"></i>Parabola</span>
+      <% end %>
+
+      <%= link_to hyperbola_path, class: 'item' do %>
+        <span class="text"><i class="fa fa-connectdevelop icon"></i>Hyperbola</span>
+      <% end %>
+      
+      <div class="divider"></div>
+      <div class="header">3D Mode</div>
+      <%= link_to sphere_path, class: 'item' do %>
+        <span class="text"><i class="ffa fa-dot-circle-o icon"></i>Sphere</span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="ui simple dropdown icon item">
+    <span class="text"><i class="fa fa-crop icon"></i>WebGL Academy</span>
+    <div class="menu">
+      <%= link_to webgl_academy_2d_triangle_path, class: 'item', id: 'tgr-cube' do %>
+        <span class="text">2D Colored Triangle</span>
+      <% end %>
+      
+      <div class="item">
+        <span class="text"><i class="blue fa fa-circle-thin icon"></i>Circle</span>
+      </div>
+
+      <div class="item">
+        <span class="text"><i class="green fa fa-lemon-o icon"></i>Ellipse</span>
+      </div>
+
+      <div class="item">
+        <span class="text"><i class="orange fa fa-moon-o icon"></i>Parabola</span>
+      </div>
+
+      <div class="item">
+        <span class="text"><i class="fa fa-connectdevelop icon"></i>Hyperbola</span>
+      </div>
+
+    </div>
+  </div>
+
+  <%= link_to root_path, class: 'ui item', title:'Questions' do %>
+      <span class="text"><i class="fa fa-question-circle icon"></i></span>
+  <% end %>
+
+  <div class="ui item right">
+    <i class="fa fa-building-o icon"></i><b>Royal University of Phnom Penh</b>
+  </div>
+
+</div>

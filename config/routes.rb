@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
   
+  root 'plot_graph#index'
+  scope 'plot_graphs' do
+    get '/' => 'plot_graph#index'
+    get 'line_equation' => 'plot_graph#line_equation'
+    get 'circle' => 'plot_graph#circle'
+    get 'ellipse' => 'plot_graph#ellipse'
+    get 'parabola' => 'plot_graph#parabola'
+    get 'hyperbola' => 'plot_graph#hyperbola'
+    get 'sphere' => 'plot_graph#sphere'
+  end
+  
+
   get 'webgl' => 'dashboard#webgl'
   get 'triangle' => 'dashboard#triangle'
   get 'transformation_matrix' => 'dashboard#transformation_matrix'
@@ -10,6 +21,9 @@ Rails.application.routes.draw do
   get 'cube_axis' => 'dashboard#cube_axis'
   get 'canvas_webgl' => 'dashboard#canvas_webgl'
 
+  get 'webgl/academy/2d/triangle' => 'webgl_academy#colored_triangle_2d'
+  get 'webgl/academy/3d/triangle' => 'webgl_academy#colored_triangle_3d'
+  
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
