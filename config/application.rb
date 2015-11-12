@@ -40,5 +40,6 @@ module WebglProject
       end if File.exists?(env_file) # end YAML.load_file
     end # end config.before_configuration
     config.quiet_assets = true
+    config.assets.paths << "#{Rails.root}/webgl/assets"
   end
 end

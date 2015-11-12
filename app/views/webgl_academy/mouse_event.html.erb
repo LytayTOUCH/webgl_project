@@ -1,11 +1,16 @@
+<%= javascript_tag do %>
+  $(document).on('ready page:load', function(){
+    main_mouse_event($('canvas')[0])
+  });
+<% end %>
 <div class="ui stackable sixteen column grid">
   <div class="row">      
 
     <div class="ui six wide column">
       
-      <h3 class="ui text header"><span class="text"><i class="orange fa fa-moon-o icon"></i>Parabola Equation Fomular</span></h3>
+      <h3 class="ui text header"><span class="text"><i class="red fa fa-line-chart icon"></i>Linear Equation Fomular</span></h3>
       <div class="ui segment">
-        <div class="ui header">Input Value into Parabola Formular:</div>
+        <div class="ui header">Input Value into Linear Formular:</div>
 
         <div class="ui header center aligned segment">Y = a X + b</div>
 
@@ -35,14 +40,14 @@
         </div>
       </div>
 
-      <button class="mini blue ui button" id="tgr-linear">Draw Graph</button>
+      <button class="mini blue ui button" id="tgr-rotating-triangle">Draw Graph</button>
 
     </div>
 
     <div class="ui ten wide column">
       <h3 class="ui text header">Graph</h3>
       <div class="ui segment">
-        <canvas id="parabola-scene" style ="width: 100%; height: 100%; background-color: blue;"></canvas>
+        <canvas id="triangle-scene" style ="width: 100%; height: 100%; background-color: #000090;"></canvas>
       </div>
     </div>
 

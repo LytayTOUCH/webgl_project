@@ -3,6 +3,7 @@ class PlotGraphController < ApplicationController
   end
 
   def line_equation
+    
   end
 
   def circle
@@ -18,5 +19,9 @@ class PlotGraphController < ApplicationController
   end
 
   def sphere
+  end
+
+  def questions
+    
   end
 end

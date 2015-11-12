@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'ready page:load', ->
-  $('#tgr-cube').click ->
-    main()
-    console.log('Cube Click!')
+  $('#tgr-rotating-triangle').click ->
+    # console.log($('canvas')[0])
+    # main_rotating_triangle($('canvas')[0])

@@ -30,7 +30,7 @@
       <div class="divider"></div>
       <div class="header">3D Mode</div>
       <%= link_to sphere_path, class: 'item' do %>
-        <span class="text"><i class="ffa fa-dot-circle-o icon"></i>Sphere</span>
+        <span class="text"><i class="fa fa-dot-circle-o icon"></i>Sphere</span>
       <% end %>
     </div>
   </div>
@@ -38,13 +38,17 @@
   <div class="ui simple dropdown icon item">
     <span class="text"><i class="fa fa-crop icon"></i>WebGL Academy</span>
     <div class="menu">
-      <%= link_to webgl_academy_2d_triangle_path, class: 'item', id: 'tgr-cube' do %>
+      <%= link_to webgl_academy_2d_triangle_path, class: 'item' do %>
         <span class="text">2D Colored Triangle</span>
       <% end %>
       
-      <div class="item">
-        <span class="text"><i class="blue fa fa-circle-thin icon"></i>Circle</span>
-      </div>
+      <%= link_to webgl_academy_3d_triangle_path, class: 'item' do %>
+        <span class="text">3D Colored Triangle</span>
+      <% end %>
+
+      <%= link_to webgl_academy_3d_mouse_event_path, class: 'item' do %>
+        <span class="text">Rotating Mouse Event</span>
+      <% end %>
 
       <div class="item">
         <span class="text"><i class="green fa fa-lemon-o icon"></i>Ellipse</span>
@@ -61,12 +65,14 @@
     </div>
   </div>
 
-  <%= link_to root_path, class: 'ui item', title:'Questions' do %>
+  <%= link_to questions_path, class: 'ui item', title:'Questions' do %>
       <span class="text"><i class="fa fa-question-circle icon"></i></span>
   <% end %>
 
-  <div class="ui item right">
-    <i class="fa fa-building-o icon"></i><b>Royal University of Phnom Penh</b>
+  <div class="ui item right" style="padding: 5px;">
+    <!-- <span style="padding-right: 5px;"><%= image_tag 'rupp_logo', size: '48x48'%></span> -->
+    <i class="fa fa-building-o icon"></i><b>Royal University of Phnom Penh</b> 
+    
   </div>
 
 </div>

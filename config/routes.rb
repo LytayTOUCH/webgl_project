@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'hyperbola' => 'plot_graph#hyperbola'
     get 'sphere' => 'plot_graph#sphere'
   end
+  get 'questions' => 'plot_graph#questions'
   
 
   get 'webgl' => 'dashboard#webgl'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
 
   get 'webgl/academy/2d/triangle' => 'webgl_academy#colored_triangle_2d'
   get 'webgl/academy/3d/triangle' => 'webgl_academy#colored_triangle_3d'
+  get 'webgl/academy/3d/mouse_event' => 'webgl_academy#mouse_event'
   
   resources :students
   # The priority is based upon order of creation: first created -> highest priority.
